@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B0886289521BACA099AF891 /* Pods_GolfTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D33EB3445B14D01C9FAF6DE /* Pods_GolfTracker.framework */; };
+		A70C86681E3D2432007B6E61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C86671E3D2432007B6E61 /* AppDelegate.swift */; };
+		A70C866A1E3D2432007B6E61 /* GTLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C86691E3D2432007B6E61 /* GTLoginViewController.swift */; };
+		A70C866D1E3D2432007B6E61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70C866B1E3D2432007B6E61 /* Main.storyboard */; };
+		A70C866F1E3D2432007B6E61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70C866E1E3D2432007B6E61 /* Assets.xcassets */; };
+		A70C86721E3D2432007B6E61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70C86701E3D2432007B6E61 /* LaunchScreen.storyboard */; };
+		A7191E911E3D2BF70019AA8F /* GTNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7191E901E3D2BF70019AA8F /* GTNetworkingManager.swift */; };
+		A7191E931E3D2E270019AA8F /* GTEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7191E921E3D2E270019AA8F /* GTEndpoints.swift */; };
+		A7191E951E3D50030019AA8F /* GTHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7191E941E3D50030019AA8F /* GTHomeViewController.swift */; };
+		A7191E971E3EE78F0019AA8F /* GTCourseSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7191E961E3EE78F0019AA8F /* GTCourseSearchViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D33EB3445B14D01C9FAF6DE /* Pods_GolfTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GolfTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F97F0C9F88AD5D7D003822A /* Pods-GolfTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GolfTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-GolfTracker/Pods-GolfTracker.release.xcconfig"; sourceTree = "<group>"; };
+		A70C86641E3D2432007B6E61 /* GolfTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GolfTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A70C86671E3D2432007B6E61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A70C86691E3D2432007B6E61 /* GTLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTLoginViewController.swift; sourceTree = "<group>"; };
+		A70C866C1E3D2432007B6E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A70C866E1E3D2432007B6E61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A70C86711E3D2432007B6E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A70C86731E3D2432007B6E61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7191E901E3D2BF70019AA8F /* GTNetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTNetworkingManager.swift; sourceTree = "<group>"; };
+		A7191E921E3D2E270019AA8F /* GTEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTEndpoints.swift; sourceTree = "<group>"; };
+		A7191E941E3D50030019AA8F /* GTHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTHomeViewController.swift; sourceTree = "<group>"; };
+		A7191E961E3EE78F0019AA8F /* GTCourseSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTCourseSearchViewController.swift; sourceTree = "<group>"; };
+		BE4E4A0626C6C6256A8C24B5 /* Pods-GolfTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GolfTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GolfTracker/Pods-GolfTracker.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A70C86611E3D2432007B6E61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B0886289521BACA099AF891 /* Pods_GolfTracker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27395557DB9159C9FA41ED97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1D33EB3445B14D01C9FAF6DE /* Pods_GolfTracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		603203AF9790F7D0A5244561 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BE4E4A0626C6C6256A8C24B5 /* Pods-GolfTracker.debug.xcconfig */,
+				5F97F0C9F88AD5D7D003822A /* Pods-GolfTracker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A70C865B1E3D2432007B6E61 = {
+			isa = PBXGroup;
+			children = (
+				A70C86661E3D2432007B6E61 /* GolfTracker */,
+				A70C86651E3D2432007B6E61 /* Products */,
+				603203AF9790F7D0A5244561 /* Pods */,
+				27395557DB9159C9FA41ED97 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A70C86651E3D2432007B6E61 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A70C86641E3D2432007B6E61 /* GolfTracker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A70C86661E3D2432007B6E61 /* GolfTracker */ = {
+			isa = PBXGroup;
+			children = (
+				A70C866B1E3D2432007B6E61 /* Main.storyboard */,
+				A70C86671E3D2432007B6E61 /* AppDelegate.swift */,
+				A7191E901E3D2BF70019AA8F /* GTNetworkingManager.swift */,
+				A7191E921E3D2E270019AA8F /* GTEndpoints.swift */,
+				A70C86691E3D2432007B6E61 /* GTLoginViewController.swift */,
+				A7191E941E3D50030019AA8F /* GTHomeViewController.swift */,
+				A7191E961E3EE78F0019AA8F /* GTCourseSearchViewController.swift */,
+				A7191E8F1E3D2B440019AA8F /* Supporting Files */,
+			);
+			path = GolfTracker;
+			sourceTree = "<group>";
+		};
+		A7191E8F1E3D2B440019AA8F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A70C866E1E3D2432007B6E61 /* Assets.xcassets */,
+				A70C86701E3D2432007B6E61 /* LaunchScreen.storyboard */,
+				A70C86731E3D2432007B6E61 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A70C86631E3D2432007B6E61 /* GolfTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A70C86761E3D2432007B6E61 /* Build configuration list for PBXNativeTarget "GolfTracker" */;
+			buildPhases = (
+				01F9B07E977BB3BE0661F7D2 /* [CP] Check Pods Manifest.lock */,
+				A70C86601E3D2432007B6E61 /* Sources */,
+				A70C86611E3D2432007B6E61 /* Frameworks */,
+				A70C86621E3D2432007B6E61 /* Resources */,
+				1710E48280F56D8CC1B2644B /* [CP] Embed Pods Frameworks */,
+				74FE01B783563F334A61803A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GolfTracker;
+			productName = GolfTracker;
+			productReference = A70C86641E3D2432007B6E61 /* GolfTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A70C865C1E3D2432007B6E61 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GT;
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = markhall;
+				TargetAttributes = {
+					A70C86631E3D2432007B6E61 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 8M6F65ZU25;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A70C865F1E3D2432007B6E61 /* Build configuration list for PBXProject "GolfTracker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A70C865B1E3D2432007B6E61;
+			productRefGroup = A70C86651E3D2432007B6E61 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A70C86631E3D2432007B6E61 /* GolfTracker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A70C86621E3D2432007B6E61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A70C86721E3D2432007B6E61 /* LaunchScreen.storyboard in Resources */,
+				A70C866F1E3D2432007B6E61 /* Assets.xcassets in Resources */,
+				A70C866D1E3D2432007B6E61 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01F9B07E977BB3BE0661F7D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1710E48280F56D8CC1B2644B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GolfTracker/Pods-GolfTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74FE01B783563F334A61803A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GolfTracker/Pods-GolfTracker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A70C86601E3D2432007B6E61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7191E971E3EE78F0019AA8F /* GTCourseSearchViewController.swift in Sources */,
+				A7191E911E3D2BF70019AA8F /* GTNetworkingManager.swift in Sources */,
+				A70C866A1E3D2432007B6E61 /* GTLoginViewController.swift in Sources */,
+				A7191E951E3D50030019AA8F /* GTHomeViewController.swift in Sources */,
+				A70C86681E3D2432007B6E61 /* AppDelegate.swift in Sources */,
+				A7191E931E3D2E270019AA8F /* GTEndpoints.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A70C866B1E3D2432007B6E61 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A70C866C1E3D2432007B6E61 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A70C86701E3D2432007B6E61 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A70C86711E3D2432007B6E61 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A70C86741E3D2432007B6E61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A70C86751E3D2432007B6E61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A70C86771E3D2432007B6E61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE4E4A0626C6C6256A8C24B5 /* Pods-GolfTracker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8M6F65ZU25;
+				INFOPLIST_FILE = GolfTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.markhall.GolfTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A70C86781E3D2432007B6E61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F97F0C9F88AD5D7D003822A /* Pods-GolfTracker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8M6F65ZU25;
+				INFOPLIST_FILE = GolfTracker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.markhall.GolfTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A70C865F1E3D2432007B6E61 /* Build configuration list for PBXProject "GolfTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70C86741E3D2432007B6E61 /* Debug */,
+				A70C86751E3D2432007B6E61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A70C86761E3D2432007B6E61 /* Build configuration list for PBXNativeTarget "GolfTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70C86771E3D2432007B6E61 /* Debug */,
+				A70C86781E3D2432007B6E61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A70C865C1E3D2432007B6E61 /* Project object */;
+}
