@@ -19,7 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Chameleon.setGlobalThemeUsingPrimaryColor(UIColor.flatGreenDark, with: .dark)
         
         if UserDefaults.standard.object(forKey: GTUserToken) != nil {
-            self.window?.rootViewController = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "GTHome")
+            let home = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "GTHome")
+            let navController = UINavigationController.init(rootViewController: home)
+            self.window?.rootViewController = navController
         }
         return true
     }

@@ -156,21 +156,21 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="Veg-dz-YRo" detailTextLabel="hy6-3o-B8l" style="IBUITableViewCellStyleValue1" id="GHd-36-Z2n">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GTCourseSearchCell" textLabel="U5C-5N-cGN" detailTextLabel="hYc-r6-y5D" style="IBUITableViewCellStyleValue1" id="lJr-gf-inc">
                                         <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GHd-36-Z2n" id="FPw-Di-oIq">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lJr-gf-inc" id="y4L-jj-gSF">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Veg-dz-YRo">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U5C-5N-cGN">
                                                     <rect key="frame" x="15" y="11" width="34" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hy6-3o-B8l">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hYc-r6-y5D">
                                                     <rect key="frame" x="316" y="11" width="44" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -185,10 +185,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="fKO-Kc-XPV" firstAttribute="top" secondItem="xnP-EJ-Dgv" secondAttribute="bottom" id="NYd-5E-YGJ"/>
                             <constraint firstItem="xnP-EJ-Dgv" firstAttribute="top" secondItem="598-lA-yNP" secondAttribute="bottom" id="RvN-Uq-aMc"/>
                             <constraint firstAttribute="trailing" secondItem="xnP-EJ-Dgv" secondAttribute="trailing" id="a6V-rp-OAB"/>
                             <constraint firstItem="xnP-EJ-Dgv" firstAttribute="leading" secondItem="cth-OD-Krh" secondAttribute="leading" id="fLg-5L-bdh"/>
-                            <constraint firstItem="fKO-Kc-XPV" firstAttribute="top" secondItem="xnP-EJ-Dgv" secondAttribute="bottom" id="yXb-ao-Um2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Course Search" id="tB2-k0-RT8">
@@ -199,20 +199,32 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="searchDisplayController" destination="92q-WR-IgE" id="dBy-3E-GqC"/>
+                        <outlet property="searchBar" destination="SXp-LR-bqx" id="vcJ-cF-5sg"/>
+                        <outlet property="tableView" destination="xnP-EJ-Dgv" id="Zig-EU-Gg4"/>
+                        <segue destination="u8W-M4-dab" kind="show" identifier="GTShowCourseDetailsSegue" id="Cow-aC-3KC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tuR-kK-BVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="92q-WR-IgE">
-                    <connections>
-                        <outlet property="delegate" destination="vya-xu-FCj" id="L29-s6-d6F"/>
-                        <outlet property="searchContentsController" destination="vya-xu-FCj" id="Eee-jR-Wba"/>
-                        <outlet property="searchResultsDataSource" destination="vya-xu-FCj" id="OMH-tD-qsR"/>
-                        <outlet property="searchResultsDelegate" destination="vya-xu-FCj" id="98G-1k-cn1"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="3042" y="-268"/>
+        </scene>
+        <!--Course Details View Controller-->
+        <scene sceneID="5Nm-Cz-YCl">
+            <objects>
+                <viewController id="u8W-M4-dab" customClass="GTCourseDetailsViewController" customModule="GolfTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vS8-vG-M1Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="19m-gr-oa5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Afi-sc-pAM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eCT-bE-enQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3996" y="-268"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AEu-El-ExG">

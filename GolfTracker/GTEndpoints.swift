@@ -13,6 +13,7 @@ import Moya
 enum GTEndpoints {
     case signUp(username: String, password: String)
     case login(username: String, password: String)
+    case courseSearch(searchString: String)
     case stats
 }
 
@@ -28,11 +29,13 @@ extension GTEndpoints: TargetType{
             return "login"
         case .stats:
             return "overallStats"
+        case .courseSearch(_):
+            return "queryCourseWithName"
         }
     }
     var method: Moya.Method {
         switch self {
-        case .signUp(_, _), .login(_, _), .stats:
+        case .signUp(_, _), .login(_, _), .stats, .courseSearch(_):
             return .post
         }
     }
@@ -42,24 +45,26 @@ extension GTEndpoints: TargetType{
             return ["Email": email, "Password": password]
         case .stats:
             return ["Email": "golfguru@icloud.com"]
+        case .courseSearch(let searchString):
+            return ["name":searchString]
         }
     }
     var task: Task {
         switch self {
-        case .signUp, .login, .stats:
+        case .signUp, .login, .stats, .courseSearch:
             return .request
         }
     }
     var parameterEncoding: ParameterEncoding {
         switch self {
-        case .signUp(_, _), .login(_, _), .stats:
+        case .signUp(_, _), .login(_, _), .stats, .courseSearch(_):
             return JSONEncoding.default
         }
     }
     
     var sampleData: Data {
         switch self {
-        case .signUp(_, _), .login(_, _), .stats:
+        case .signUp(_, _), .login(_, _), .stats, .courseSearch(_):
             return Data()
         }
     }

@@ -12,11 +12,15 @@
 		A70C866A1E3D2432007B6E61 /* GTLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C86691E3D2432007B6E61 /* GTLoginViewController.swift */; };
 		A70C866D1E3D2432007B6E61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70C866B1E3D2432007B6E61 /* Main.storyboard */; };
 		A70C866F1E3D2432007B6E61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70C866E1E3D2432007B6E61 /* Assets.xcassets */; };
-		A70C86721E3D2432007B6E61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70C86701E3D2432007B6E61 /* LaunchScreen.storyboard */; };
 		A7191E911E3D2BF70019AA8F /* GTNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7191E901E3D2BF70019AA8F /* GTNetworkingManager.swift */; };
 		A7191E931E3D2E270019AA8F /* GTEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7191E921E3D2E270019AA8F /* GTEndpoints.swift */; };
 		A7191E951E3D50030019AA8F /* GTHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7191E941E3D50030019AA8F /* GTHomeViewController.swift */; };
 		A7191E971E3EE78F0019AA8F /* GTCourseSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7191E961E3EE78F0019AA8F /* GTCourseSearchViewController.swift */; };
+		A7FE5B291E4019FD00796456 /* GTCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE5B281E4019FD00796456 /* GTCourse.swift */; };
+		A7FE5B2B1E401A7200796456 /* GTTee.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE5B2A1E401A7200796456 /* GTTee.swift */; };
+		A7FE5B2D1E401A8800796456 /* GTHole.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE5B2C1E401A8800796456 /* GTHole.swift */; };
+		A7FE5B2F1E40227B00796456 /* GTCourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE5B2E1E40227B00796456 /* GTCourseDetailsViewController.swift */; };
+		A7FE5B311E40234600796456 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FE5B301E40234600796456 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,12 +31,16 @@
 		A70C86691E3D2432007B6E61 /* GTLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTLoginViewController.swift; sourceTree = "<group>"; };
 		A70C866C1E3D2432007B6E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A70C866E1E3D2432007B6E61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A70C86711E3D2432007B6E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A70C86731E3D2432007B6E61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7191E901E3D2BF70019AA8F /* GTNetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTNetworkingManager.swift; sourceTree = "<group>"; };
 		A7191E921E3D2E270019AA8F /* GTEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTEndpoints.swift; sourceTree = "<group>"; };
 		A7191E941E3D50030019AA8F /* GTHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTHomeViewController.swift; sourceTree = "<group>"; };
 		A7191E961E3EE78F0019AA8F /* GTCourseSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTCourseSearchViewController.swift; sourceTree = "<group>"; };
+		A7FE5B281E4019FD00796456 /* GTCourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTCourse.swift; sourceTree = "<group>"; };
+		A7FE5B2A1E401A7200796456 /* GTTee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTTee.swift; sourceTree = "<group>"; };
+		A7FE5B2C1E401A8800796456 /* GTHole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTHole.swift; sourceTree = "<group>"; };
+		A7FE5B2E1E40227B00796456 /* GTCourseDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTCourseDetailsViewController.swift; sourceTree = "<group>"; };
+		A7FE5B301E40234600796456 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE4E4A0626C6C6256A8C24B5 /* Pods-GolfTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GolfTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GolfTracker/Pods-GolfTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,6 +94,7 @@
 		A70C86661E3D2432007B6E61 /* GolfTracker */ = {
 			isa = PBXGroup;
 			children = (
+				A7FE5B271E4019DD00796456 /* Models */,
 				A70C866B1E3D2432007B6E61 /* Main.storyboard */,
 				A70C86671E3D2432007B6E61 /* AppDelegate.swift */,
 				A7191E901E3D2BF70019AA8F /* GTNetworkingManager.swift */,
@@ -93,6 +102,7 @@
 				A70C86691E3D2432007B6E61 /* GTLoginViewController.swift */,
 				A7191E941E3D50030019AA8F /* GTHomeViewController.swift */,
 				A7191E961E3EE78F0019AA8F /* GTCourseSearchViewController.swift */,
+				A7FE5B2E1E40227B00796456 /* GTCourseDetailsViewController.swift */,
 				A7191E8F1E3D2B440019AA8F /* Supporting Files */,
 			);
 			path = GolfTracker;
@@ -102,10 +112,20 @@
 			isa = PBXGroup;
 			children = (
 				A70C866E1E3D2432007B6E61 /* Assets.xcassets */,
-				A70C86701E3D2432007B6E61 /* LaunchScreen.storyboard */,
+				A7FE5B301E40234600796456 /* LaunchScreen.storyboard */,
 				A70C86731E3D2432007B6E61 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A7FE5B271E4019DD00796456 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A7FE5B281E4019FD00796456 /* GTCourse.swift */,
+				A7FE5B2A1E401A7200796456 /* GTTee.swift */,
+				A7FE5B2C1E401A8800796456 /* GTHole.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,7 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A70C86721E3D2432007B6E61 /* LaunchScreen.storyboard in Resources */,
+				A7FE5B311E40234600796456 /* LaunchScreen.storyboard in Resources */,
 				A70C866F1E3D2432007B6E61 /* Assets.xcassets in Resources */,
 				A70C866D1E3D2432007B6E61 /* Main.storyboard in Resources */,
 			);
@@ -238,7 +258,11 @@
 				A70C866A1E3D2432007B6E61 /* GTLoginViewController.swift in Sources */,
 				A7191E951E3D50030019AA8F /* GTHomeViewController.swift in Sources */,
 				A70C86681E3D2432007B6E61 /* AppDelegate.swift in Sources */,
+				A7FE5B291E4019FD00796456 /* GTCourse.swift in Sources */,
 				A7191E931E3D2E270019AA8F /* GTEndpoints.swift in Sources */,
+				A7FE5B2B1E401A7200796456 /* GTTee.swift in Sources */,
+				A7FE5B2D1E401A8800796456 /* GTHole.swift in Sources */,
+				A7FE5B2F1E40227B00796456 /* GTCourseDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,14 +275,6 @@
 				A70C866C1E3D2432007B6E61 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A70C86701E3D2432007B6E61 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A70C86711E3D2432007B6E61 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -361,7 +377,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8M6F65ZU25;
-				INFOPLIST_FILE = GolfTracker/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GolfTracker/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.markhall.GolfTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -375,7 +391,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8M6F65ZU25;
-				INFOPLIST_FILE = GolfTracker/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/GolfTracker/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.markhall.GolfTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
