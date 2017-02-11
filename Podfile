@@ -9,4 +9,6 @@ target 'GolfTracker' do
 	pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
 	pod 'SwiftyJSON'
 	pod 'Moya', '8.0.1'
+	pod 'Eureka', '~> 2.0.0-beta.1'
+	pod 'DZNEmptyDataSet'
 end

@@ -21,6 +21,7 @@
 		A7FE5B2D1E401A8800796456 /* GTHole.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE5B2C1E401A8800796456 /* GTHole.swift */; };
 		A7FE5B2F1E40227B00796456 /* GTCourseDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE5B2E1E40227B00796456 /* GTCourseDetailsViewController.swift */; };
 		A7FE5B311E40234600796456 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7FE5B301E40234600796456 /* LaunchScreen.storyboard */; };
+		A7FE5B351E4FB12500796456 /* GTAddCourseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE5B341E4FB12500796456 /* GTAddCourseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		A7FE5B2C1E401A8800796456 /* GTHole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTHole.swift; sourceTree = "<group>"; };
 		A7FE5B2E1E40227B00796456 /* GTCourseDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTCourseDetailsViewController.swift; sourceTree = "<group>"; };
 		A7FE5B301E40234600796456 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A7FE5B341E4FB12500796456 /* GTAddCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTAddCourseViewController.swift; sourceTree = "<group>"; };
 		BE4E4A0626C6C6256A8C24B5 /* Pods-GolfTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GolfTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GolfTracker/Pods-GolfTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 				A7191E941E3D50030019AA8F /* GTHomeViewController.swift */,
 				A7191E961E3EE78F0019AA8F /* GTCourseSearchViewController.swift */,
 				A7FE5B2E1E40227B00796456 /* GTCourseDetailsViewController.swift */,
+				A7FE5B341E4FB12500796456 /* GTAddCourseViewController.swift */,
 				A7191E8F1E3D2B440019AA8F /* Supporting Files */,
 			);
 			path = GolfTracker;
@@ -258,6 +261,7 @@
 				A70C866A1E3D2432007B6E61 /* GTLoginViewController.swift in Sources */,
 				A7191E951E3D50030019AA8F /* GTHomeViewController.swift in Sources */,
 				A70C86681E3D2432007B6E61 /* AppDelegate.swift in Sources */,
+				A7FE5B351E4FB12500796456 /* GTAddCourseViewController.swift in Sources */,
 				A7FE5B291E4019FD00796456 /* GTCourse.swift in Sources */,
 				A7191E931E3D2E270019AA8F /* GTEndpoints.swift in Sources */,
 				A7FE5B2B1E401A7200796456 /* GTTee.swift in Sources */,
@@ -381,6 +385,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.markhall.GolfTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -395,6 +400,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.markhall.GolfTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

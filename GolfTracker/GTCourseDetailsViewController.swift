@@ -14,7 +14,7 @@ class GTCourseDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = course?.name
+        title = course?.name?.uppercased()
     }
 
     override func didReceiveMemoryWarning() {

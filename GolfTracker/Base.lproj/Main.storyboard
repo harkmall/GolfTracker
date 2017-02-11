@@ -100,7 +100,7 @@
                                 </constraints>
                                 <state key="normal" title="Track Round"/>
                                 <connections>
-                                    <segue destination="RLq-qj-z98" kind="presentation" id="w2E-7Q-4m3"/>
+                                    <segue destination="xsE-7T-pfC" kind="presentation" id="qze-sv-src"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -120,22 +120,22 @@
             <point key="canvasLocation" x="1350" y="133"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="fd7-py-EkL">
+        <scene sceneID="SnV-a6-Kn0">
             <objects>
-                <navigationController id="RLq-qj-z98" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yxY-ID-Owr">
+                <navigationController id="xsE-7T-pfC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I8d-We-XD2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="vya-xu-FCj" kind="relationship" relationship="rootViewController" id="gKK-t3-MDn"/>
+                        <segue destination="vya-xu-FCj" kind="relationship" relationship="rootViewController" id="FyN-rG-TLh"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lVZ-6R-foK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="afZ-rd-Xo4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2191" y="-267"/>
+            <point key="canvasLocation" x="2182" y="-269"/>
         </scene>
-        <!--Course Search-->
+        <!--COURSE SEARCH-->
         <scene sceneID="yWU-iw-Bga">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="vya-xu-FCj" customClass="GTCourseSearchViewController" customModule="GolfTracker" customModuleProvider="target" sceneMemberID="viewController">
@@ -156,21 +156,21 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GTCourseSearchCell" textLabel="U5C-5N-cGN" detailTextLabel="hYc-r6-y5D" style="IBUITableViewCellStyleValue1" id="lJr-gf-inc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GTCourseSearchCell" textLabel="4tZ-OM-U1P" detailTextLabel="cVo-H8-kfj" style="IBUITableViewCellStyleValue1" id="DTE-hh-Kgv">
                                         <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lJr-gf-inc" id="y4L-jj-gSF">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DTE-hh-Kgv" id="pOM-pX-r4t">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U5C-5N-cGN">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4tZ-OM-U1P">
                                                     <rect key="frame" x="15" y="11" width="34" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hYc-r6-y5D">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cVo-H8-kfj">
                                                     <rect key="frame" x="316" y="11" width="44" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -191,7 +191,7 @@
                             <constraint firstItem="xnP-EJ-Dgv" firstAttribute="leading" secondItem="cth-OD-Krh" secondAttribute="leading" id="fLg-5L-bdh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Course Search" id="tB2-k0-RT8">
+                    <navigationItem key="navigationItem" title="COURSE SEARCH" id="tB2-k0-RT8">
                         <barButtonItem key="rightBarButtonItem" title="Cancel" id="pXl-uN-Ezh">
                             <connections>
                                 <action selector="cancelPressed:" destination="vya-xu-FCj" id="MPE-7P-Nw9"/>
@@ -201,7 +201,8 @@
                     <connections>
                         <outlet property="searchBar" destination="SXp-LR-bqx" id="vcJ-cF-5sg"/>
                         <outlet property="tableView" destination="xnP-EJ-Dgv" id="Zig-EU-Gg4"/>
-                        <segue destination="u8W-M4-dab" kind="show" identifier="GTShowCourseDetailsSegue" id="Cow-aC-3KC"/>
+                        <segue destination="u8W-M4-dab" kind="show" identifier="GTShowCourseDetailsSegue" id="khd-KD-36O"/>
+                        <segue destination="sqd-pj-XP8" kind="show" identifier="GTAddCourseSegue" id="NIE-41-nFJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tuR-kK-BVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -224,7 +225,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eCT-bE-enQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3996" y="-268"/>
+            <point key="canvasLocation" x="3978" y="-491"/>
+        </scene>
+        <!--ADD A COURSE-->
+        <scene sceneID="95a-JE-V0s">
+            <objects>
+                <viewController id="sqd-pj-XP8" customClass="GTAddCourseViewController" customModule="GolfTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AGd-fw-jBR"/>
+                        <viewControllerLayoutGuide type="bottom" id="dF3-1f-YwZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zaX-iw-Rks">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ADD A COURSE" id="3D0-3l-ota"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jOf-VY-zWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3977" y="204"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AEu-El-ExG">

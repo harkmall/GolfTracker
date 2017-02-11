@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import DZNEmptyDataSet
 
-class GTCourseSearchViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
+class GTCourseSearchViewController: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource, DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!{
         didSet{
@@ -28,6 +29,9 @@ class GTCourseSearchViewController: UIViewController, UISearchBarDelegate, UITab
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+        tableView.emptyDataSetSource = self
+        tableView.emptyDataSetDelegate = self
+        tableView.tableFooterView = UIView()
 
     }
     
@@ -66,16 +70,46 @@ class GTCourseSearchViewController: UIViewController, UISearchBarDelegate, UITab
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedCourse = self.searchResults[indexPath.row] as! GTCourse
+        selectedCourse = self.searchResults[indexPath.row] as? GTCourse
+        tableView.deselectRow(at: indexPath, animated: true)
+        view.endEditing(true)
         performSegue(withIdentifier: "GTShowCourseDetailsSegue", sender: self)
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "GTShowCourseDetailsSegue"){
-            let detailVC = segue.destination as! GTCourseDetailsViewController
-            detailVC.course = selectedCourse
+            if let detailVC = segue.destination as? GTCourseDetailsViewController {
+                detailVC.course = selectedCourse
+            }
         }
+    }
+    
+    //MARK: Empty Data delegate/data source
+    func title(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+        let str = "Can't find your course?"
+        let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+//    func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
+//        let str = "Tap the button below to add your first grokkleglob."
+//        let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)]
+//        return NSAttributedString(string: str, attributes: attrs)
+//    }
+    
+//    func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
+//        return UIImage(named: "taylor-swift")
+//    }
+    
+    func buttonTitle(forEmptyDataSet scrollView: UIScrollView, for state: UIControlState) -> NSAttributedString? {
+        let str = "Add Course"
+        let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.callout)]
+        return NSAttributedString(string: str, attributes: attrs)
+    }
+    
+    func emptyDataSet(_ scrollView: UIScrollView, didTap button: UIButton) {
+        performSegue(withIdentifier: "GTAddCourseSegue", sender: self)
     }
 
 }

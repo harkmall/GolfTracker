@@ -3,6 +3,8 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - DZNEmptyDataSet (1.8.1)
+  - Eureka (2.0.0-beta.1)
   - Moya (8.0.1):
     - Moya/Core (= 8.0.1)
   - Moya/Core (8.0.1):
@@ -13,6 +15,8 @@ PODS:
 
 DEPENDENCIES:
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
+  - DZNEmptyDataSet
+  - Eureka (~> 2.0.0-beta.1)
   - Moya (= 8.0.1)
   - SwiftyJSON
 
@@ -28,10 +32,12 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
   Moya: f2e10a04fcb27fec154cb2afa4e536e8b46dac04
   Result: 4e3ed5995ed94d0cd6a09be9a431fce3f3624bbf
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 29fe0b1221e91c14b0c165516a3559fdb371ac7b
+PODFILE CHECKSUM: 75fcae975be720001a7e3ec8141ad7a6cda9fa87
 
 COCOAPODS: 1.2.0
