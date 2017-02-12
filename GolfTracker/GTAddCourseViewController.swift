@@ -11,6 +11,9 @@ import Eureka
 
 class GTAddCourseViewController: FormViewController {
     
+    var teeNames = Dictionary<String, String>()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,42 +25,44 @@ class GTAddCourseViewController: FormViewController {
             }
             
             +++ Section("Tees")
-            <<< TextRow(){
-                $0.title = "Tee Name"
-                $0.placeholder = "Name"
-            }
             <<< ButtonRow(){
                 $0.title = "Add Tee"
-            }.onCellSelection({ (_, _) in
-                var section = self.form.allSections[1]
-                section.insert(TextRow() {
-                    $0.title = "Tee name"
-                    $0.placeholder = "Name"
-                }, at: section.count-1)
-            })
-        +++ Section()
+                }.onCellSelection({ (_, _) in
+                    var section = self.form.allSections[1]
+                    section.insert(TextRow("\(section.count)") {
+                        $0.title = "Tee name"
+                        $0.placeholder = "Name"
+                        }.onChange({ (row) in
+                            self.teeNames[row.tag!] = row.value
+                        }), at: section.count-1)
+                })
+            +++ Section()
             <<< ButtonRow(){
                 $0.title = "Add Holes"
                 }.onCellSelection({ (cell, row) in
+                    if (self.teeNames.keys.count == 0){
+                        return;
+                    }
                     row.hidden = true
                     row.evaluateHidden()
                     for i in 1...18 {
-                        let holesSection = self.form.allSections[i+2]
-                        holesSection.hidden = false
-                        holesSection.evaluateHidden()
+                        let holesSection = Section("Hole \(i)")
+                        holesSection <<< TextRow(){
+                            $0.title = "Par"
+                            $0.placeholder = "Par"
+                        }
+                        for (_, teeName) in self.teeNames {
+                            holesSection <<< TextRow(){
+                                $0.title = teeName
+                                $0.placeholder = "Distance"
+                            }
+                        }
+                        self.form +++ holesSection
                     }
+                    let addTeeButton = self.form.allSections[1].last
+                    addTeeButton?.hidden = true
+                    addTeeButton?.evaluateHidden()
+                    print(self.teeNames)
                 })
-        
-        for i in 1...18{
-            var holesSection = Section("Hole \(i)")
-            holesSection += [TextRow(){
-                $0.title = "Par"
-                $0.placeholder = "Par"
-                }]
-            holesSection.hidden = true
-            holesSection.evaluateHidden()
-            form +++ holesSection
-        }
     }
-    
 }
