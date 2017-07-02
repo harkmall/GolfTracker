@@ -16,9 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        Chameleon.setGlobalThemeUsingPrimaryColor(UIColor.flatGreenDark, with: .dark)
+//        Chameleon.setGlobalThemeUsingPrimaryColor(UIColor.flatGreenDark, with: .dark)
         
-        if UserDefaults.standard.object(forKey: GTUserToken) != nil {
+        if let token = UserDefaults.standard.object(forKey: GTUserToken) {
+            print(token)
             let home = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "GTHome")
             let navController = UINavigationController.init(rootViewController: home)
             self.window?.rootViewController = navController

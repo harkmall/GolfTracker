@@ -6,65 +6,44 @@
 //  Copyright © 2017 markhall. All rights reserved.
 //
 
-/*
- courseSchema = new db.Schema({
-     name: String,
-     tees: [{
-         name: String,
-         slope: Number,
-         rating: Number
-     }],
-     holes: [{
-         hole: Number,
-         yards: [{
-             name: String,
-             distance: String
-         }],
-         par: Number
-     }],
-     location: {
-         lat: Number,
-         long: Number
-     },
- })
- 
- */
-
 import UIKit
 import SwiftyJSON
-
-struct GTCourseLocation {
-    var latitude: Double
-    var longitude: Double
-    
-    init(longitudeValue: Double?, latitudeValue: Double?){
-        longitude = longitudeValue!
-        latitude = latitudeValue!
-    }
-}
+import MapKit
 
 class GTCourse: NSObject {
     
     var name: String?
-    var tees: Array<GTTee>?
-    var holes: Array<GTHole>?
-    var location: GTCourseLocation?
+    var tees: [GTTee]?
+    var holes: [GTHole]?
+    var location: CLLocationCoordinate2D?
     
-    init(withJson json:JSON){
-        name = json["name"].string
-        tees = Array<GTTee>()
+    override init() {
+        
+    }
+    
+    convenience init(withJson json:JSON){
+        let name = json["name"].string
+        var tees = Array<GTTee>()
         let teesArray = json["tees"].array
         for teeJSON in teesArray! {
-            tees?.append(GTTee.init(withJson: teeJSON))
+            tees.append(GTTee.init(withJson: teeJSON))
         }
-        holes = Array<GTHole>()
+        var holes = Array<GTHole>()
         let holesArray = json["holes"].array
         for holeJSON in holesArray! {
-            holes?.append(GTHole.init(withJson: holeJSON))
+            holes.append(GTHole.init(withJson: holeJSON))
         }
-        location = GTCourseLocation.init(longitudeValue: json["location"]["long"].double, latitudeValue: json["location"]["lat"].double)
         
+        let location = CLLocationCoordinate2D(latitude: json["location"]["long"].double!, longitude: json["location"]["lat"].double!)
         
+        self.init(withName: name, tees: tees, holes: holes, location: location)
+    }
+    
+    init(withName name:String?, tees:[GTTee], holes:[GTHole], location: CLLocationCoordinate2D) {
+        self.name = name
+        self.tees = tees
+        self.holes = holes
+        self.location = location
     }
 
 }

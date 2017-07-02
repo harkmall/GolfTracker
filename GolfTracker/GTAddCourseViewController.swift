@@ -9,60 +9,199 @@
 import UIKit
 import Eureka
 
-class GTAddCourseViewController: FormViewController {
+class GTAddCourseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var teeNames = Dictionary<String, String>()
+    var course: GTCourse?
+    var holes: [GTHole] = {
+        var holes = [GTHole]()
+        for index in 0...17 {
+            let hole = GTHole(number: index+1)
+            holes.append(hole)
+        }
+        return holes
+    }()
+    var tees = [GTTee]()
+    var doneTees = false
     
+    @IBOutlet weak var saveCourseButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = course?.name?.uppercased()
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "Tees"
+        default:
+            return doneTees ? "HOLE \(section - 1)" : ""
+        }
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return doneTees ? 20 : 2;
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch section {
+        case 0:
+            return tees.count + (doneTees ? 0 : 1)
+        default:
+            return doneTees ? tees.count + 1 : 1
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 0:
+            if indexPath.row == tees.count {
+                tees.append(GTTee())
+                tableView.beginUpdates()
+                tableView.reloadRows(at: [indexPath], with: .automatic)
+                tableView.insertRows(at: [IndexPath(row: tees.count, section: 0)], with: .middle)
+                tableView.endUpdates()
+            }
+        case 1:
+            if (indexPath.row == 0 && !doneTees) {
+                doneTees = true
+                for hole in holes {
+                    for tee in tees {
+                        hole.yardages.append(GTHoleYardage(distance: tee.distance, name: tee.name))
+                    }
+                }
+                tableView.reloadData()
+            }
+        default:
+            return
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        form
-            +++ Section("")
-            <<< TextRow() {
-                $0.title = "Course name"
-                $0.placeholder = "Name here"
+        let holeNumber = indexPath.row
+        switch indexPath.section {
+        case 0:
+            if indexPath.row == self.tees.count {
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "buttonCell", for: indexPath) as? GTButtonTableViewCell {
+                    cell.buttonTitle.text = "Add Tee"
+                    return cell
+                }
             }
             
-            +++ Section("Tees")
-            <<< ButtonRow(){
-                $0.title = "Add Tee"
-                }.onCellSelection({ (_, _) in
-                    var section = self.form.allSections[1]
-                    section.insert(TextRow("\(section.count)") {
-                        $0.title = "Tee name"
-                        $0.placeholder = "Name"
-                        }.onChange({ (row) in
-                            self.teeNames[row.tag!] = row.value
-                        }), at: section.count-1)
-                })
-            +++ Section()
-            <<< ButtonRow(){
-                $0.title = "Add Holes"
-                }.onCellSelection({ (cell, row) in
-                    if (self.teeNames.keys.count == 0){
-                        return;
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "textCell", for: indexPath) as? GTTextTableViewCell {
+                cell.titleLabel.text = "Tee Name"
+                cell.inputField.placeholder = "Name"
+                cell.inputField.text = self.tees[indexPath.row].name
+                cell.onChangeClosure = { [unowned self] in
+                    let tee = self.tees[indexPath.row]
+                    if let name = cell.inputField.text {
+                        tee.name = name
                     }
-                    row.hidden = true
-                    row.evaluateHidden()
-                    for i in 1...18 {
-                        let holesSection = Section("Hole \(i)")
-                        holesSection <<< TextRow(){
-                            $0.title = "Par"
-                            $0.placeholder = "Par"
+                }
+                cell.selectionStyle = .none
+                return cell
+            }
+            
+        default:
+            if (!doneTees){
+                if let cell = tableView.dequeueReusableCell(withIdentifier: "buttonCell", for: indexPath) as? GTButtonTableViewCell {
+                    cell.buttonTitle.text = "Add Holes"
+                    return cell
+                }
+            }
+            else{
+                switch indexPath.row {
+                case 0:
+                    if let cell = tableView.dequeueReusableCell(withIdentifier: "textCell", for: indexPath) as? GTTextTableViewCell {
+                        cell.titleLabel.text = "Par"
+                        cell.inputField.placeholder = "Par"
+                        if let par = holes[indexPath.section - 2].par {
+                            cell.inputField.text = "\(par)"
                         }
-                        for (_, teeName) in self.teeNames {
-                            holesSection <<< TextRow(){
-                                $0.title = teeName
-                                $0.placeholder = "Distance"
+                        else{
+                            cell.inputField.text = ""
+                        }
+                        cell.onChangeClosure = { [unowned self] in
+                            let hole = self.holes[indexPath.section-2]
+                            if let par = cell.inputField.text {
+                                hole.par = Int(par)
                             }
+                            print(self.holes)
                         }
-                        self.form +++ holesSection
+                        cell.selectionStyle = .none
+                        return cell
                     }
-                    let addTeeButton = self.form.allSections[1].last
-                    addTeeButton?.hidden = true
-                    addTeeButton?.evaluateHidden()
-                    print(self.teeNames)
-                })
+                default:
+                    if let cell = tableView.dequeueReusableCell(withIdentifier: "textCell", for: indexPath) as? GTTextTableViewCell {
+                        cell.titleLabel.text = holes[holeNumber].yardages[indexPath.row-1].name
+                        cell.inputField.placeholder = "Yards"
+                        if let yards = holes[indexPath.section - 2].yardages[indexPath.row-1].distance {
+                            cell.inputField.text = "\(yards)"
+                        }
+                        else{
+                            cell.inputField.text = ""
+                        }
+                        cell.onChangeClosure = { [unowned self] in
+                            let tee = self.holes[indexPath.section - 2].yardages[indexPath.row-1]
+                            if let yards = cell.inputField.text {
+                                tee.distance = Int(yards)
+                            }
+                            print(self.holes)
+                        }
+                        cell.selectionStyle = .none
+                        return cell
+                    }
+                }
+            }
+        }
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        switch indexPath.section {
+        case 0:
+            return indexPath.row != self.tees.count
+        default:
+            return false
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            switch indexPath.section {
+            case 1:
+                self.tees.remove(at: indexPath.row)
+                tableView.beginUpdates()
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+                tableView.endUpdates()
+            default:
+                return
+            }
+        }
+    }
+    
+    @IBAction func saveCoursePressed(_ sender: Any) {
+        if let course = course{
+            course.tees = tees
+            course.holes = holes
+            GTNetworkingManager.sharedManager.saveCourse(course: course) { (response) in
+                if let errorMessage = response["error"].string{
+                    print(errorMessage)
+                }
+                else{
+                    print(response)
+                }
+            }
+        }
+        
+    }
+}
+
+extension UITableView {
+    func indexPath(for view: UIView) -> IndexPath? {
+        let location = view.convert(CGPoint.zero, to: self)
+        return self.indexPathForRow(at: location)
     }
 }

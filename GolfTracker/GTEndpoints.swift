@@ -8,18 +8,19 @@
 
 import Foundation
 import Moya
-
+import SwiftyJSON
 
 enum GTEndpoints {
     case signUp(username: String, password: String)
     case login(username: String, password: String)
     case courseSearch(searchString: String)
     case stats
+    case saveCourse(name: String, tees: [[String:Any?]], holes:[[String:Any?]], location: [String:Any?])
 }
 
 extension GTEndpoints: TargetType{
     var baseURL: URL {
-        return URL(string: "http://192.168.2.10:3000/")!
+        return URL(string: "http://192.168.0.27:3000/")!
     }
     var path: String {
         switch self {
@@ -31,11 +32,13 @@ extension GTEndpoints: TargetType{
             return "overallStats"
         case .courseSearch(_):
             return "queryCourseWithName"
+        case .saveCourse(_,_,_,_):
+            return "saveCourse"
         }
     }
     var method: Moya.Method {
         switch self {
-        case .signUp(_, _), .login(_, _), .stats, .courseSearch(_):
+        case .signUp(_, _), .login(_, _), .stats, .courseSearch(_), .saveCourse(_,_,_,_):
             return .post
         }
     }
@@ -47,24 +50,26 @@ extension GTEndpoints: TargetType{
             return ["Email": "golfguru@icloud.com"]
         case .courseSearch(let searchString):
             return ["name":searchString]
+        case .saveCourse(let name, let tees, let holes, let location):
+            return ["name": name, "tees": tees, "holes":holes, "location": location]
         }
     }
     var task: Task {
         switch self {
-        case .signUp, .login, .stats, .courseSearch:
+        case .signUp, .login, .stats, .courseSearch, .saveCourse:
             return .request
         }
     }
     var parameterEncoding: ParameterEncoding {
         switch self {
-        case .signUp(_, _), .login(_, _), .stats, .courseSearch(_):
+        case .signUp(_, _), .login(_, _), .stats, .courseSearch(_), .saveCourse(_,_,_,_):
             return JSONEncoding.default
         }
     }
     
     var sampleData: Data {
         switch self {
-        case .signUp(_, _), .login(_, _), .stats, .courseSearch(_):
+        case .signUp(_, _), .login(_, _), .stats, .courseSearch(_), .saveCourse(_,_,_,_):
             return Data()
         }
     }

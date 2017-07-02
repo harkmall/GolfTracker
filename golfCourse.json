@@ -1,0 +1,81 @@
+{
+    "name": "London Hunt Club",
+    "tees": [{
+        "name": "black",
+        "distance": 7200
+    }, {
+        "name": "gold",
+        "distance": 6900
+    }, {
+        "name": "blue",
+        "distance": 6500
+    }, {
+        "name": "white",
+        "distance": 6000
+    }, {
+        "name": "green",
+        "distance": 5800
+    }, {
+        "name": "black",
+        "distance": 5400
+    }],
+    "holes": [{
+        "hole": 1,
+        "yards": [{
+                "name": "black",
+                "distance": 430
+            },
+            {
+                "name": "gold",
+                "distance": 410
+            },
+            {
+                "name": "blue",
+                "distance": 380
+            },
+            {
+                "name": "white",
+                "distance": 350
+            },
+            {
+                "name": "green",
+                "distance": 350
+            },
+            {
+                "name": "red",
+                "distance": 300
+            }
+        ],
+        "par": 4
+
+    }, {
+        "hole": 2,
+        "yards": [{
+                "name": "black",
+                "distance": 210
+            },
+            {
+                "name": "gold",
+                "distance": 190
+            },
+            {
+                "name": "blue",
+                "distance": 175
+            },
+            {
+                "name": "white",
+                "distance": 160
+            },
+            {
+                "name": "green",
+                "distance": 160
+            },
+            {
+                "name": "red",
+                "distance": 120
+            }
+        ],
+        "par": 3
+
+    }]
+}

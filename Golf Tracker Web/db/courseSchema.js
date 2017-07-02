@@ -9,7 +9,7 @@ courseSchema = new db.Schema({
         hole: Number,
         yards: [{
             name: String,
-            distance: String
+            distance: Number
         }],
         par: Number
     }],

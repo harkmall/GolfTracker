@@ -12,10 +12,14 @@
 		A70C866A1E3D2432007B6E61 /* GTLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70C86691E3D2432007B6E61 /* GTLoginViewController.swift */; };
 		A70C866D1E3D2432007B6E61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A70C866B1E3D2432007B6E61 /* Main.storyboard */; };
 		A70C866F1E3D2432007B6E61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A70C866E1E3D2432007B6E61 /* Assets.xcassets */; };
+		A718CE281F09557100DFCAB8 /* GTCourseLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A718CE271F09557100DFCAB8 /* GTCourseLocationViewController.swift */; };
+		A718CE2A1F0959DB00DFCAB8 /* huntClub.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A718CE291F0959DB00DFCAB8 /* huntClub.gpx */; };
 		A7191E911E3D2BF70019AA8F /* GTNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7191E901E3D2BF70019AA8F /* GTNetworkingManager.swift */; };
 		A7191E931E3D2E270019AA8F /* GTEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7191E921E3D2E270019AA8F /* GTEndpoints.swift */; };
 		A7191E951E3D50030019AA8F /* GTHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7191E941E3D50030019AA8F /* GTHomeViewController.swift */; };
 		A7191E971E3EE78F0019AA8F /* GTCourseSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7191E961E3EE78F0019AA8F /* GTCourseSearchViewController.swift */; };
+		A750FC441EAD5BCA00EE1110 /* GTTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A750FC431EAD5BCA00EE1110 /* GTTextTableViewCell.swift */; };
+		A750FC461EAD5C5500EE1110 /* GTButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A750FC451EAD5C5500EE1110 /* GTButtonTableViewCell.swift */; };
 		A7FE5B291E4019FD00796456 /* GTCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE5B281E4019FD00796456 /* GTCourse.swift */; };
 		A7FE5B2B1E401A7200796456 /* GTTee.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE5B2A1E401A7200796456 /* GTTee.swift */; };
 		A7FE5B2D1E401A8800796456 /* GTHole.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FE5B2C1E401A8800796456 /* GTHole.swift */; };
@@ -33,10 +37,14 @@
 		A70C866C1E3D2432007B6E61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A70C866E1E3D2432007B6E61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A70C86731E3D2432007B6E61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A718CE271F09557100DFCAB8 /* GTCourseLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTCourseLocationViewController.swift; sourceTree = "<group>"; };
+		A718CE291F0959DB00DFCAB8 /* huntClub.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = huntClub.gpx; sourceTree = "<group>"; };
 		A7191E901E3D2BF70019AA8F /* GTNetworkingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTNetworkingManager.swift; sourceTree = "<group>"; };
 		A7191E921E3D2E270019AA8F /* GTEndpoints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTEndpoints.swift; sourceTree = "<group>"; };
 		A7191E941E3D50030019AA8F /* GTHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTHomeViewController.swift; sourceTree = "<group>"; };
 		A7191E961E3EE78F0019AA8F /* GTCourseSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTCourseSearchViewController.swift; sourceTree = "<group>"; };
+		A750FC431EAD5BCA00EE1110 /* GTTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTTextTableViewCell.swift; sourceTree = "<group>"; };
+		A750FC451EAD5C5500EE1110 /* GTButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTButtonTableViewCell.swift; sourceTree = "<group>"; };
 		A7FE5B281E4019FD00796456 /* GTCourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTCourse.swift; sourceTree = "<group>"; };
 		A7FE5B2A1E401A7200796456 /* GTTee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTTee.swift; sourceTree = "<group>"; };
 		A7FE5B2C1E401A8800796456 /* GTHole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GTHole.swift; sourceTree = "<group>"; };
@@ -96,24 +104,36 @@
 		A70C86661E3D2432007B6E61 /* GolfTracker */ = {
 			isa = PBXGroup;
 			children = (
-				A7FE5B271E4019DD00796456 /* Models */,
 				A70C866B1E3D2432007B6E61 /* Main.storyboard */,
 				A70C86671E3D2432007B6E61 /* AppDelegate.swift */,
+				A7FE5B271E4019DD00796456 /* Models */,
 				A7191E901E3D2BF70019AA8F /* GTNetworkingManager.swift */,
 				A7191E921E3D2E270019AA8F /* GTEndpoints.swift */,
 				A70C86691E3D2432007B6E61 /* GTLoginViewController.swift */,
 				A7191E941E3D50030019AA8F /* GTHomeViewController.swift */,
 				A7191E961E3EE78F0019AA8F /* GTCourseSearchViewController.swift */,
-				A7FE5B2E1E40227B00796456 /* GTCourseDetailsViewController.swift */,
-				A7FE5B341E4FB12500796456 /* GTAddCourseViewController.swift */,
+				A718CE261F09555E00DFCAB8 /* Add Course */,
 				A7191E8F1E3D2B440019AA8F /* Supporting Files */,
+				A750FC431EAD5BCA00EE1110 /* GTTextTableViewCell.swift */,
+				A750FC451EAD5C5500EE1110 /* GTButtonTableViewCell.swift */,
 			);
 			path = GolfTracker;
+			sourceTree = "<group>";
+		};
+		A718CE261F09555E00DFCAB8 /* Add Course */ = {
+			isa = PBXGroup;
+			children = (
+				A7FE5B341E4FB12500796456 /* GTAddCourseViewController.swift */,
+				A7FE5B2E1E40227B00796456 /* GTCourseDetailsViewController.swift */,
+				A718CE271F09557100DFCAB8 /* GTCourseLocationViewController.swift */,
+			);
+			name = "Add Course";
 			sourceTree = "<group>";
 		};
 		A7191E8F1E3D2B440019AA8F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A718CE291F0959DB00DFCAB8 /* huntClub.gpx */,
 				A70C866E1E3D2432007B6E61 /* Assets.xcassets */,
 				A7FE5B301E40234600796456 /* LaunchScreen.storyboard */,
 				A70C86731E3D2432007B6E61 /* Info.plist */,
@@ -197,6 +217,7 @@
 			files = (
 				A7FE5B311E40234600796456 /* LaunchScreen.storyboard in Resources */,
 				A70C866F1E3D2432007B6E61 /* Assets.xcassets in Resources */,
+				A718CE2A1F0959DB00DFCAB8 /* huntClub.gpx in Resources */,
 				A70C866D1E3D2432007B6E61 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,7 +237,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		1710E48280F56D8CC1B2644B /* [CP] Embed Pods Frameworks */ = {
@@ -260,13 +281,16 @@
 				A7191E911E3D2BF70019AA8F /* GTNetworkingManager.swift in Sources */,
 				A70C866A1E3D2432007B6E61 /* GTLoginViewController.swift in Sources */,
 				A7191E951E3D50030019AA8F /* GTHomeViewController.swift in Sources */,
+				A750FC461EAD5C5500EE1110 /* GTButtonTableViewCell.swift in Sources */,
 				A70C86681E3D2432007B6E61 /* AppDelegate.swift in Sources */,
 				A7FE5B351E4FB12500796456 /* GTAddCourseViewController.swift in Sources */,
 				A7FE5B291E4019FD00796456 /* GTCourse.swift in Sources */,
+				A750FC441EAD5BCA00EE1110 /* GTTextTableViewCell.swift in Sources */,
 				A7191E931E3D2E270019AA8F /* GTEndpoints.swift in Sources */,
 				A7FE5B2B1E401A7200796456 /* GTTee.swift in Sources */,
 				A7FE5B2D1E401A8800796456 /* GTHole.swift in Sources */,
 				A7FE5B2F1E40227B00796456 /* GTCourseDetailsViewController.swift in Sources */,
+				A718CE281F09557100DFCAB8 /* GTCourseLocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -47,7 +47,7 @@ class GTCourseSearchViewController: UIViewController, UISearchBarDelegate, UITab
         if (searchText.characters.count > 0){
             GTNetworkingManager.sharedManager.searchForCourse(name: searchText) { (response) in
                 for course in response.array!{
-                    self.searchResults.append(GTCourse.init(withJson: course))
+                    self.searchResults.append(GTCourse(withJson: course))
                 }
                 self.tableView.reloadData()
             }
@@ -91,16 +91,6 @@ class GTCourseSearchViewController: UIViewController, UISearchBarDelegate, UITab
         let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)]
         return NSAttributedString(string: str, attributes: attrs)
     }
-    
-//    func description(forEmptyDataSet scrollView: UIScrollView) -> NSAttributedString? {
-//        let str = "Tap the button below to add your first grokkleglob."
-//        let attrs = [NSFontAttributeName: UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)]
-//        return NSAttributedString(string: str, attributes: attrs)
-//    }
-    
-//    func image(forEmptyDataSet scrollView: UIScrollView) -> UIImage? {
-//        return UIImage(named: "taylor-swift")
-//    }
     
     func buttonTitle(forEmptyDataSet scrollView: UIScrollView, for state: UIControlState) -> NSAttributedString? {
         let str = "Add Course"

@@ -79,8 +79,6 @@ app.post('/saveCourse', function(req, res) {
         name: req.body.name,
         tees: tees,
         holes: holesArray,
-        slope: req.body.slope,
-        rating: req.body.rating,
         location: req.body.location
     })
 
