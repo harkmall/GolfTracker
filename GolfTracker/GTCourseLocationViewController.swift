@@ -76,4 +76,7 @@ class GTCourseLocationViewController: UIViewController, CLLocationManagerDelegat
             detailsVC.course = course
         }
     }
+    @IBAction func cancelPressed(_ sender: Any) {
+        presentingViewController?.dismiss(animated: true, completion: nil)
+    }
 }

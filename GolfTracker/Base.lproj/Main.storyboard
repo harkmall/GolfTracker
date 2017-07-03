@@ -203,7 +203,7 @@
                         <outlet property="searchBar" destination="SXp-LR-bqx" id="vcJ-cF-5sg"/>
                         <outlet property="tableView" destination="xnP-EJ-Dgv" id="Zig-EU-Gg4"/>
                         <segue destination="u8W-M4-dab" kind="show" identifier="GTShowCourseDetailsSegue" id="khd-KD-36O"/>
-                        <segue destination="ZXt-Ua-pYn" kind="show" identifier="GTAddCourseSegue" id="ihO-os-U7t"/>
+                        <segue destination="ebE-CN-5b8" kind="modal" identifier="GTAddCourseSegue" id="ihO-os-U7t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tuR-kK-BVP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -303,7 +303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NAF-h1-0iA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5886" y="-251"/>
+            <point key="canvasLocation" x="6824.8000000000002" y="-251.42428785607197"/>
         </scene>
         <!--COURSE LOCATION-->
         <scene sceneID="B3d-4i-f75">
@@ -358,7 +358,13 @@
                             <constraint firstItem="ozh-Js-zTA" firstAttribute="top" secondItem="uJ2-77-raA" secondAttribute="bottom" id="v8V-kA-WM3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="COURSE LOCATION" id="xIo-Ze-2Gb"/>
+                    <navigationItem key="navigationItem" title="COURSE LOCATION" id="xIo-Ze-2Gb">
+                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="o2D-c1-UGh">
+                            <connections>
+                                <action selector="cancelPressed:" destination="ZXt-Ua-pYn" id="kPg-hl-bXR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="courseNameField" destination="dRM-Op-qD6" id="aQg-3p-EsU"/>
                         <outlet property="mapView" destination="uJ2-77-raA" id="U2b-7e-ady"/>
@@ -368,7 +374,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cxE-gT-BVj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3976.8000000000002" y="241.52923538230885"/>
+            <point key="canvasLocation" x="4916" y="241.52923538230885"/>
         </scene>
         <!--ADD A COURSE-->
         <scene sceneID="95a-JE-V0s">
@@ -472,7 +478,13 @@
                             <constraint firstAttribute="trailing" secondItem="L8P-Xu-dxP" secondAttribute="trailing" id="xsu-Dc-7NM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ADD A COURSE" id="3D0-3l-ota"/>
+                    <navigationItem key="navigationItem" title="ADD A COURSE" id="3D0-3l-ota">
+                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="CpC-bL-8uz">
+                            <connections>
+                                <action selector="cancelPressed:" destination="sqd-pj-XP8" id="Zkn-Ku-s8u"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="saveCourseButton" destination="Pcw-EP-kYj" id="XmA-lU-eE8"/>
                         <outlet property="tableView" destination="L8P-Xu-dxP" id="cAd-YX-Ypy"/>
@@ -480,7 +492,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jOf-VY-zWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4761" y="242"/>
+            <point key="canvasLocation" x="5700" y="241.52923538230885"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AEu-El-ExG">
@@ -497,6 +509,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zfq-cJ-AvB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-425" y="116"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NlB-vH-UbW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ebE-CN-5b8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MAJ-nK-bjM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZXt-Ua-pYn" kind="relationship" relationship="rootViewController" id="UhR-c0-dDn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qbo-cn-2YG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3976.8000000000002" y="241.52923538230885"/>
         </scene>
     </scenes>
 </document>

@@ -16,12 +16,14 @@ class GTCourse: NSObject {
     var tees: [GTTee]?
     var holes: [GTHole]?
     var location: CLLocationCoordinate2D?
+    var courseId: String?
     
     override init() {
         
     }
     
     convenience init(withJson json:JSON){
+        let id = json["_id"].string
         let name = json["name"].string
         var tees = Array<GTTee>()
         let teesArray = json["tees"].array
@@ -34,16 +36,21 @@ class GTCourse: NSObject {
             holes.append(GTHole.init(withJson: holeJSON))
         }
         
-        let location = CLLocationCoordinate2D(latitude: json["location"]["long"].double!, longitude: json["location"]["lat"].double!)
+        var location = CLLocationCoordinate2D()
         
-        self.init(withName: name, tees: tees, holes: holes, location: location)
+        if let latitude = json["location"]["longitude"].double, let longitude = json["location"]["latitude"].double {
+            location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        }
+        
+        self.init(withName: name, tees: tees, holes: holes, location: location, courseId: id)
     }
     
-    init(withName name:String?, tees:[GTTee], holes:[GTHole], location: CLLocationCoordinate2D) {
+    init(withName name:String?, tees:[GTTee], holes:[GTHole], location: CLLocationCoordinate2D, courseId:String?) {
         self.name = name
         self.tees = tees
         self.holes = holes
         self.location = location
+        self.courseId = courseId
     }
 
 }

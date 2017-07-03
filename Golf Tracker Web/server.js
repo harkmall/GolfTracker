@@ -64,9 +64,11 @@ function validateYards(yards, tees) {
 app.post('/saveCourse', function(req, res) {
     var tees = req.body.tees
     var holesArray = req.body.holes
+    var name = req.body.name
+    var location = req.body.location
 
     for (var i = 0; i < holesArray.length; i++) {
-        var yards = holesArray[i].yards
+        var yards = holesArray[i].yardages
         if (!validateYards(yards, tees)) {
             res.status(400).json({
                 error: "invalid course object"
@@ -76,10 +78,10 @@ app.post('/saveCourse', function(req, res) {
     }
 
     var courseObject = new Course({
-        name: req.body.name,
+        name: name,
         tees: tees,
         holes: holesArray,
-        location: req.body.location
+        location: location
     })
 
     courseObject.save(function(err, course) {

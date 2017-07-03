@@ -117,14 +117,14 @@ class GTAddCourseViewController: UIViewController, UITableViewDelegate, UITableV
                     if let cell = tableView.dequeueReusableCell(withIdentifier: "textCell", for: indexPath) as? GTTextTableViewCell {
                         cell.titleLabel.text = "Par"
                         cell.inputField.placeholder = "Par"
-                        if let par = holes[indexPath.section - 2].par {
+                        if let par = holes[indexPath.section - 1].par {
                             cell.inputField.text = "\(par)"
                         }
                         else{
                             cell.inputField.text = ""
                         }
                         cell.onChangeClosure = { [unowned self] in
-                            let hole = self.holes[indexPath.section-2]
+                            let hole = self.holes[indexPath.section-1]
                             if let par = cell.inputField.text {
                                 hole.par = Int(par)
                             }
@@ -137,14 +137,14 @@ class GTAddCourseViewController: UIViewController, UITableViewDelegate, UITableV
                     if let cell = tableView.dequeueReusableCell(withIdentifier: "textCell", for: indexPath) as? GTTextTableViewCell {
                         cell.titleLabel.text = holes[holeNumber].yardages[indexPath.row-1].name
                         cell.inputField.placeholder = "Yards"
-                        if let yards = holes[indexPath.section - 2].yardages[indexPath.row-1].distance {
+                        if let yards = holes[indexPath.section - 1].yardages[indexPath.row-1].distance {
                             cell.inputField.text = "\(yards)"
                         }
                         else{
                             cell.inputField.text = ""
                         }
                         cell.onChangeClosure = { [unowned self] in
-                            let tee = self.holes[indexPath.section - 2].yardages[indexPath.row-1]
+                            let tee = self.holes[indexPath.section - 1].yardages[indexPath.row-1]
                             if let yards = cell.inputField.text {
                                 tee.distance = Int(yards)
                             }
@@ -172,7 +172,7 @@ class GTAddCourseViewController: UIViewController, UITableViewDelegate, UITableV
         if (editingStyle == .delete) {
             switch indexPath.section {
             case 1:
-                self.tees.remove(at: indexPath.row)
+                tees.remove(at: indexPath.row)
                 tableView.beginUpdates()
                 tableView.deleteRows(at: [indexPath], with: .automatic)
                 tableView.endUpdates()
@@ -197,11 +197,7 @@ class GTAddCourseViewController: UIViewController, UITableViewDelegate, UITableV
         }
         
     }
-}
-
-extension UITableView {
-    func indexPath(for view: UIView) -> IndexPath? {
-        let location = view.convert(CGPoint.zero, to: self)
-        return self.indexPathForRow(at: location)
+    @IBAction func cancelPressed(_ sender: Any) {
+        presentingViewController?.dismiss(animated: true, completion: nil)
     }
 }

@@ -7,14 +7,14 @@ courseSchema = new db.Schema({
     }],
     holes: [{
         hole: Number,
-        yards: [{
+        yardages: [{
             name: String,
             distance: Number
         }],
         par: Number
     }],
     location: {
-        lat: Number,
-        long: Number
+        latitude: Number,
+        longitude: Number
     },
 })
