@@ -20,7 +20,7 @@ enum GTEndpoints {
 
 extension GTEndpoints: TargetType{
     var baseURL: URL {
-        return URL(string: "http://192.168.0.27:3000/")!
+        return URL(string: "http://localhost:3000/")!
     }
     var path: String {
         switch self {

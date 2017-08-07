@@ -36,12 +36,12 @@ class GTAddCourseViewController: UIViewController, UITableViewDelegate, UITableV
         case 0:
             return "Tees"
         default:
-            return doneTees ? "HOLE \(section - 1)" : ""
+            return doneTees ? "HOLE \(section)" : ""
         }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return doneTees ? 20 : 2;
+        return doneTees ? 19 : 2;
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
